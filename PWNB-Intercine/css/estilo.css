@@ -2,14 +2,12 @@ body{
     background-color: black;
 }
 
-h1{
-    color:white
-}
 /* menu */
 .navbar-brand {
-    color: #020238; 
+    color: white; 
     font-size: 1.8em; 
     font-weight: bold;
+    
 }
 
 .nav-link {
@@ -18,6 +16,7 @@ h1{
 
 .cor1{
     background-color: #1a327a;
+    width: 100%;
 }
 
 /* pagina Filmes */
@@ -30,7 +29,7 @@ h1{
 }
 
 .filmes-page h2 a.active {
-    color: white; 
+    color: #007bff;
 }
 
 /* Pagina Sobre */
@@ -47,7 +46,7 @@ h1{
 
 #sobre_nos h2 {
     color: #007bff; 
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -116,4 +115,202 @@ h1{
     color:azure;
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Estilo para as sessões */
+.sessoes {
+    margin-top: 20px;
+    color: white;
+    
+}
+
+/* Estilo para cada bloco de informações do shopping */
+.shopping-info {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3c454f; 
+    padding-bottom: 10px;
+}
+
+/* Estilo para o título de cada shopping */
+.shopping-info h3 {
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+/* Estilo para a lista de sessões */
+.sessoes-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para cada item de sessão */
+.sessoes-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o link "Compre Aqui" */
+.sessoes-list a {
+    background-color: #007bff; 
+    color: #ffffff;
+    padding: 5px 10px; 
+    border-radius: 10px; 
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+/* estilo para quando clicar no botão */
+.sessoes-list a:hover {
+    background-color: #297fb8;
+}
+
+
+/* estilo para parte de sessões */
+.barra-datas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.localidade {
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+
+.opcoes-data {
+    display: flex;
+    align-items: center;
+}
+
+.opcoes-data label {
+    margin-right: 10px;
+}
+
+.sessoes {
+    text-align: left;
+}
+
+.sessoes h2 {
+    margin-bottom: 20px;
+}
+
+.shopping-info {
+    margin-bottom: 30px;
+}
+
+.sessoes-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sessoes-list li {
+    margin-bottom: 10px;
+}
+
+/* pagina cinemas */
+.container h2 {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.container h2.mb-4 {
+    margin-bottom: 25px;
+}
+
+.shopping-box {
+    border: 1px solid #3c454f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.shopping-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o link do shopping */
+.shopping-box a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilo para o título do shopping */
+.shopping-box h3 {
+    margin-top: 0;
+    font-size: 20px; /* Altere o tamanho da fonte conforme necessário */
+}
+
+/* Estilo para o texto da descrição do shopping */
+.shopping-box p {
+    color: white;
+    font-size: 14px; 
+}
+
+/* Adaptação para diferentes tamanhos de tela */
+@media (max-width: 767px) {
+    .shopping-box {
+        margin-right: 0;
+    }
+}
+
+/* pagina assentos */
+.pagina-assentos {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 20px;
+    color: white;
+    font-size: 29px;
+}
+
+.assentos-container {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr); /* 8 colunas */
+    grid-template-rows: repeat(13, 1fr);
+    gap: 5px;
+}
+
+.assento {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.assento.reservado {
+    background-color: #ff9999;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-navbar {
+    background-color: #1a327a; /* Cor de fundo diferente da navegação existente */
+    width: 100%;
+}
+
+.custom-navbar .navbar-brand {
+    color: #fff; /* Cor do texto para a nova navegação */
+    /* Outros estilos para a marca */
 }
