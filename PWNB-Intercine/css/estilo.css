@@ -1,0 +1,119 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color:white
+}
+/* menu */
+.navbar-brand {
+    color: #020238; 
+    font-size: 1.8em; 
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white; 
+}
+
+.cor1{
+    background-color: #1a327a;
+}
+
+/* pagina Filmes */
+.filmes-page h2 a {
+    color: white; 
+    font-size: 0.8em; 
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px; 
+}
+
+.filmes-page h2 a.active {
+    color: white; 
+}
+
+/* Pagina Sobre */
+#sobre_nos {
+    color: white;
+    padding: 20px;
+}
+
+#sobre_nos h1 {
+    color: #007bff; 
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#sobre_nos h2 {
+    color: #007bff; 
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#sobre_nos p {
+    color: white; 
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Pagina sinopse */
+.filme-sinopse {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filme-sinopse img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#sinopse {
+    flex: 1;
+}
+
+#sinopse h2 {
+    margin-bottom: 10px;
+}
+
+#sinopse p {
+    margin-top: 10px;
+}
+
+.informacoes-adicionais {
+    display: flex;
+}
+
+.informacoes-adicionais .coluna {
+    flex: 1;
+    padding: 0 20px;
+}
+
+#sinopse img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#sinopse {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#sinopse h2 {
+    color: #007bff;
+    font-size: 24px;
+}
+
+#sinopse p {
+    color:azure;
+    font-size: 16px;
+    line-height: 1.5;
+}
