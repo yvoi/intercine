@@ -1,0 +1,25 @@
+from flask import Flask, request
+import random
+
+app = Flask(__name__)
+
+# Lista de filmes
+filmes = ["Filme A", "Filme B", "Filme C", "Filme D"]
+
+# Resposta padrão
+resposta_padrao = "Desculpe, não entendi. Pode reformular a pergunta?"
+
+@app.route("/", methods=["POST"])
+def webhook():
+    data = request.get_json()
+    mensagem = data["message"]["text"]
+
+    if "filmes" in mensagem.lower():
+        resposta = "Os filmes em exibição são:\n" + "\n".join(filmes)
+    else:
+        resposta = resposta_padrao
+
+    return {"fulfillmentText": resposta}
+
+if __name__ == "__main__":
+    app.run(port=5000)
