@@ -39,13 +39,13 @@ body{
 }
 
 #sobre_nos h1 {
-    color: #007bff; 
+    color: white; 
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 #sobre_nos h2 {
-    color: #007bff; 
+    color: rgb(92, 126, 183); 
     font-size: 1.3em;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -266,6 +266,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 }
 
 h1 {
@@ -276,24 +277,25 @@ h1 {
 
 .assentos-container {
     display: grid;
-    grid-template-columns: repeat(14, 1fr); /* 8 colunas */
+    grid-template-columns: repeat(14, 1fr); 
     grid-template-rows: repeat(13, 1fr);
-    gap: 5px;
+    gap: 4px;
 }
 
 .assento {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ddd;
-    border: 1px solid #ccc;
+    background-color: #5573d8;
+    border: 1px solid #3854b0;
     cursor: pointer;
+    
 }
 
 .assento.reservado {
-    background-color: #ff9999;
+    background-color: rgb(174, 203, 44);
 }
 
 button {
@@ -303,14 +305,65 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px; 
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .custom-navbar {
-    background-color: #1a327a; /* Cor de fundo diferente da navegação existente */
+    background-color: #1a327a; 
     width: 100%;
 }
 
 .custom-navbar .navbar-brand {
-    color: #fff; /* Cor do texto para a nova navegação */
-    /* Outros estilos para a marca */
+    color: #fff;
+}
+
+/* tela de login */
+
+/* Estilos específicos para a Página de Login */
+.pagina-login .container {
+    max-width: 500px; 
+    margin: 60px auto; 
+    padding: 20px;
+    background-color: rgb(22, 21, 21); 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px #3c454f; 
+}
+
+.pagina-login .form-label {
+    color: #343a40; 
+}
+
+.pagina-login .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagina-login .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #ffffff;
+}
+
+.pagina-login .form-label-custom {
+    color: white;
+}
+
+/* tela de tipo de ingresso */
+.pagina-ingressos .container {
+    max-width: 500px; 
+    margin: 60px auto; 
+    padding: 30px;
+    background-color: rgb(22, 21, 21); 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px #3c454f; 
+}
+
+.pagina-ingressos h2{
+    font-size: 16px;
+}
+
+.pagina-ingressos .form-label{
+    color: white;
 }

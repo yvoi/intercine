@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +17,10 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-
     <link rel="stylesheet" href="css/estilo.css">
     <title>Intercine</title>
 </head>
-
-<body class="pagina-assentos">
-
+<body class="pagina-ingressos">
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg cor1">
         <div class="container-fluid">
@@ -46,28 +42,39 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="sobre.html">Sobre</a>
-              </li>
-              
+              </li>             
             </ul>
           </div>
         </div>
       </nav>
 
-      
+      <div class="container mt-5 pagina-ingressos">
+        <h1 class="text-center">Ingressos</h1>
+        <br>
+        <h2>Selecione o tipo de ingresso:</h2>
+        
+            <!-- Formulário de seleção de ingresso -->
+            <form id="ingressoForm">
+                <div class="mb-3">
+                    <label for="quantidadeInteira" class="form-label">Inteira:</label>
+                    <input type="number" class="form-control" id="quantidadeInteira" min="0" required>
+                </div>
     
-    <h1>Escolha seu assento</h1>
-    <div class="assentos-container" id="assentos-container">
-        <!-- grade será gerada pelo js -->
-    </div>
-    <button onclick="verificarAssentos()">Prosseguir</button>
+                <div class="mb-3">
+                    <label for="quantidadeMeia" class="form-label">Meia-entrada:</label>
+                    <input type="number" class="form-control" id="quantidadeMeia" min="0" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="quantidadeMeia" class="form-label">Cliente Intercine:</label>
+                    <input type="number" class="form-control" id="quantidadeMeia" min="0" required>
+                </div>
     
+                <button type="button" class="btn btn-primary" onclick="confirmarCompra()">Prosseguir</button>
+            </form>
+        </div>
+
     <script src="js/script.js"></script>
-    <script>
-        function prosseguirParaLogin() {
-            // Redireciona para a página de login
-            window.location.href = 'login.html';
-        }
-    </script>
-    </body>
     
-    </html>
+</body>
+</html>

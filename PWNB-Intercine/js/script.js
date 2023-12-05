@@ -44,4 +44,45 @@ function reservarAssento(assentoElement) {
 
 criarAssentos();
 
+//só vai prosseguir se escolher uma cadeira
+function verificarAssentos() {
+    const assentosReservados = document.querySelectorAll('.assento.reservado');
+
+    if (assentosReservados.length > 0) {
+        window.location.href = 'login.html';
+    } else {
+        alert('Escolha pelo um assento para prosseguir.');
+    }
+}
+
+//login
+function validarLogin() {
+    // Obter os valores dos campos de entrada
+    const email = document.getElementById('inputEmail').value;
+    const senha = document.getElementById('inputPassword').value;
+
+    // Validar e-mail
+    if (!email.includes('@')) {
+        alert('E-mail inválido');
+        return;
+    }
+
+    // Validar senha
+    const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+    if (!senhaRegex.test(senha)) {
+        alert('A senha deve conter pelo menos 6 caracteres, incluindo maiúsculas, minúsculas e números.');
+        return;
+    }
+
+    // Login padrão
+    const emailPadrao = 'abc123@gmail.com';
+    const senhaPadrao = 'Abc123';
+
+    // Verificar se o email e a senha estão corretos
+    if (email === emailPadrao && senha === senhaPadrao) {
+        window.location.href = 'tipoIngresso.html';
+    } else {
+        alert('Email ou senha incorretos!');
+    }
+}
 
