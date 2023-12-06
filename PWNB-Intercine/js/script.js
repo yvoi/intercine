@@ -51,7 +51,7 @@ function verificarAssentos() {
     if (assentosReservados.length > 0) {
         window.location.href = 'login.html';
     } else {
-        alert('Escolha pelo um assento para prosseguir.');
+        alert('Escolha um assento para prosseguir.');
     }
 }
 
@@ -61,16 +61,9 @@ function validarLogin() {
     const email = document.getElementById('inputEmail').value;
     const senha = document.getElementById('inputPassword').value;
 
-    // Validar e-mail
-    if (!email.includes('@')) {
-        alert('E-mail inválido');
-        return;
-    }
-
-    // Validar senha
-    const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
-    if (!senhaRegex.test(senha)) {
-        alert('A senha deve conter pelo menos 6 caracteres, incluindo maiúsculas, minúsculas e números.');
+    // Verificar se os campos estão preenchidos
+    if (email.trim() === '' || senha.trim() === '') {
+        alert('Preencha todos os campos.');
         return;
     }
 
@@ -85,4 +78,43 @@ function validarLogin() {
         alert('Email ou senha incorretos!');
     }
 }
+
+//validação tipo de ingresso
+function confirmarCompra() {
+    const quantidadeInteira = parseInt(document.getElementById('quantidadeInteira').value, 10);
+    const quantidadeMeia = parseInt(document.getElementById('quantidadeMeia').value, 10);
+    const quantidadeClienteIntercine = parseInt(document.getElementById('quantidadeClienteIntercine').value, 10);
+
+    if (quantidadeInteira > 0 || quantidadeMeia > 0 || quantidadeClienteIntercine > 0) {
+        window.location.href = 'pagamento.html';
+    } else {
+        alert('Escolha um tipo de ingresso para continuar.');
+    }
+}
+
+// Calculo valor total pagina ingresso
+function calcularTotal() {
+    const quantidadeInteira = parseInt(document.getElementById('quantidadeInteira').value, 10) || 0;
+    const quantidadeMeia = parseInt(document.getElementById('quantidadeMeia').value, 10) || 0;
+    const quantidadeClienteIntercine = parseInt(document.getElementById('quantidadeClienteIntercine').value, 10) || 0;
+
+    const precoInteira = 30;
+    const precoMeia = 15;
+    const precoClienteIntercine = 20;
+
+    // Calcular o valor total para cada tipo de ingresso
+    const totalInteira = quantidadeInteira * precoInteira;
+    const totalMeia = quantidadeMeia * precoMeia;
+    const totalClienteIntercine = quantidadeClienteIntercine * precoClienteIntercine;
+
+    // Exibir o valor de cada tipo de ingresso
+    document.getElementById('valorInteira').textContent = `Valor: R$ ${totalInteira.toFixed(2)}`;
+    document.getElementById('valorMeia').textContent = `Valor: R$ ${totalMeia.toFixed(2)}`;
+    document.getElementById('valorClienteIntercine').textContent = `Valor: R$ ${totalClienteIntercine.toFixed(2)}`;
+
+    const valorTotal = totalInteira + totalMeia + totalClienteIntercine;
+    document.getElementById('valorTotal').value = `R$ ${valorTotal.toFixed(2)}`;
+}
+
+document.getElementById('prosseguirBtn').addEventListener('click', confirmarCompra);
 

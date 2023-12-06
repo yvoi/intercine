@@ -269,9 +269,9 @@ body{
     background-color: white;
 }
 
-h1 {
+.pagina-assentos h1 {
     margin-top: 20px;
-    color: white;
+    color: black;
     font-size: 29px;
 }
 
@@ -350,6 +350,10 @@ button {
     color: white;
 }
 
+.pagina-login h1 {
+    color: white;
+}
+
 /* tela de tipo de ingresso */
 .pagina-ingressos .container {
     max-width: 500px; 
@@ -362,6 +366,10 @@ button {
 
 .pagina-ingressos h2{
     font-size: 16px;
+}
+
+.pagina-ingressos h1{
+    color: white;
 }
 
 .pagina-ingressos .form-label{
